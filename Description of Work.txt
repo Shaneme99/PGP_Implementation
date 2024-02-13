@@ -1,0 +1,8 @@
+The implemenetation contains two parts, the sender and the reciever. The sender
+Depends on a set of already generated keys from the reciever, so it checks to see
+if the proper file has been created. If not, prompt the user to generate it. If the key
+exists, the sender then generates its own keys and then gets text from the user.
+After getting text, it encrypts the message with a shared AES key, in this case the string
+'Sixteen byte key'. Once the text is properly encrypted and the hash is generated, this is all
+written to encrypted.txt. Then, the user can run reciever.py, which then reads this file,
+parses it, and decrypts the proper data points. The reciever then shows the user what has been sent.
